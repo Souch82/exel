@@ -26,9 +26,9 @@
   --radius: 5px;
   --shadow: 0 1px 3px rgba(0,0,0,.08), 0 1px 2px rgba(0,0,0,.06);
 }
-
+ 
 * { box-sizing: border-box; margin: 0; padding: 0; }
-
+ 
 body {
   font-family: 'DM Sans', sans-serif;
   background: var(--bg);
@@ -39,7 +39,7 @@ body {
   display: flex;
   flex-direction: column;
 }
-
+ 
 /* ── TOP STATUS BAR ── */
 #status-bar {
   display: flex; align-items: center; justify-content: space-between;
@@ -61,7 +61,7 @@ body {
 #save-dot { width: 6px; height: 6px; border-radius: 50%; background: currentColor; opacity: .7; }
 #save-pill.saving #save-dot { animation: blink .9s ease-in-out infinite; }
 @keyframes blink { 0%,100%{opacity:.3} 50%{opacity:1} }
-
+ 
 /* ── TOOLBAR ── */
 #toolbar {
   display: flex; align-items: center; flex-wrap: wrap;
@@ -72,7 +72,7 @@ body {
 }
 .tb-group { display: flex; align-items: center; gap: 1px; }
 .tb-sep { width: 1px; height: 18px; background: var(--border-dark); margin: 0 4px; }
-
+ 
 .tb-btn {
   display: flex; align-items: center; justify-content: center;
   min-width: 24px; height: 24px; padding: 0 5px;
@@ -85,7 +85,7 @@ body {
 .tb-btn:hover { background: var(--surface); border-color: var(--border); }
 .tb-btn.active { background: var(--accent-light); border-color: var(--accent-mid); color: var(--accent); }
 .tb-btn.danger { color: var(--danger); }
-
+ 
 select.tb-sel {
   height: 24px; padding: 0 4px; border: 1px solid var(--border);
   border-radius: var(--radius); background: var(--surface);
@@ -93,12 +93,12 @@ select.tb-sel {
   color: var(--text); cursor: pointer; outline: none;
 }
 select.tb-sel:focus { border-color: var(--accent); }
-
+ 
 .color-swatch {
   width: 14px; height: 14px; border-radius: 2px; border: 1px solid rgba(0,0,0,.15);
   cursor: pointer; flex-shrink: 0;
 }
-
+ 
 /* Border picker dropdown */
 .dropdown-wrap { position: relative; }
 .dropdown-menu {
@@ -116,7 +116,7 @@ select.tb-sel:focus { border-color: var(--accent); }
 }
 .dd-item:hover { background: var(--accent-light); }
 .dd-icon { font-size: 13px; width: 16px; text-align: center; }
-
+ 
 /* Color palettes */
 .color-palette {
   display: none; position: absolute; top: 100%; left: 0;
@@ -139,7 +139,7 @@ select.tb-sel:focus { border-color: var(--accent); }
   display: flex; align-items: center; justify-content: center;
   font-size: 9px; color: var(--danger);
 }
-
+ 
 /* ── FORMULA BAR ── */
 #formula-bar {
   display: flex; align-items: center; gap: 6px;
@@ -160,12 +160,12 @@ select.tb-sel:focus { border-color: var(--accent); }
   outline: none; background: var(--surface); color: var(--text);
 }
 #formula-input:focus { border-color: var(--accent); box-shadow: 0 0 0 2px var(--accent-light); }
-
+ 
 /* ── GRID ── */
 #grid-wrap { flex: 1; overflow: auto; position: relative; background: var(--surface); }
-
+ 
 table { border-collapse: collapse; table-layout: fixed; }
-
+ 
 .col-header {
   background: var(--header-bg); border: 1px solid var(--border-dark);
   text-align: center; font-size: 11px; color: var(--text-soft);
@@ -193,7 +193,7 @@ table { border-collapse: collapse; table-layout: fixed; }
 .row-header.sel { background: var(--sel-col); color: #fff; border-color: var(--sel-col); }
 .col-header.hl  { background: #dbeafe; color: var(--text); }
 .row-header.hl  { background: #dbeafe; color: var(--text); }
-
+ 
 td.cell {
   border: 1px solid var(--border);
   width: 72px; min-width: 72px; height: 22px;
@@ -202,7 +202,7 @@ td.cell {
 }
 td.cell.selected { outline: 2px solid var(--accent); outline-offset: -2px; z-index: 1; }
 td.cell.in-selection { background: var(--accent-light) !important; }
-
+ 
 /* ref highlights */
 td.cell.ref-0 { background: rgba(37,99,235,.1); outline: 2px solid #2563eb; outline-offset:-2px; z-index:1; }
 td.cell.ref-1 { background: rgba(220,38,38,.1);  outline: 2px solid #dc2626; outline-offset:-2px; z-index:1; }
@@ -212,7 +212,7 @@ td.cell.ref-4 { background: rgba(147,51,234,.1); outline: 2px solid #9333ea; out
 td.cell.ref-5 { background: rgba(6,182,212,.1);  outline: 2px solid #06b6d4; outline-offset:-2px; z-index:1; }
 td.cell.ref-6 { background: rgba(234,88,12,.1);  outline: 2px solid #ea580c; outline-offset:-2px; z-index:1; }
 td.cell.ref-7 { background: rgba(5,150,105,.1);  outline: 2px solid #059669; outline-offset:-2px; z-index:1; }
-
+ 
 .cell-display {
   width: 100%; height: 100%;
   padding: 1px 4px; overflow: hidden;
@@ -221,7 +221,7 @@ td.cell.ref-7 { background: rgba(5,150,105,.1);  outline: 2px solid #059669; out
 }
 .cell-display.num { text-align: right; font-family: 'DM Mono', monospace; }
 .cell-display.err { color: var(--danger); text-align: center; font-size: 10px; }
-
+ 
 .cell-editor {
   position: absolute; top: -1px; left: -1px;
   width: calc(100% + 2px); min-width: 120px;
@@ -231,10 +231,10 @@ td.cell.ref-7 { background: rgba(5,150,105,.1);  outline: 2px solid #059669; out
   outline: none; z-index: 10; background: #fff;
   box-shadow: 0 2px 8px rgba(37,99,235,.2);
 }
-
+ 
 /* merged cells */
 td.merged-hidden { display: none; }
-
+ 
 /* ── CONTEXT MENU ── */
 #ctx {
   display: none; position: fixed;
@@ -251,7 +251,7 @@ td.merged-hidden { display: none; }
 .ctx-item.danger:hover { background: #fee2e2; color: var(--danger); }
 .ctx-sep { height: 1px; background: var(--border); margin: 3px 0; }
 .ctx-icon { width: 14px; text-align: center; font-size: 12px; }
-
+ 
 /* ── LOADING ── */
 #loading-overlay {
   position: fixed; inset: 0; background: rgba(250,250,250,.9);
@@ -268,10 +268,10 @@ td.merged-hidden { display: none; }
 }
 @keyframes spin { to { transform: rotate(360deg); } }
 #loading-text { font-size: 12px; color: var(--text-soft); }
-
+ 
 /* formula mode */
 body.formula-mode td.cell { cursor: crosshair; }
-
+ 
 /* column resize handle */
 .col-header { position: relative; }
 .col-resize {
@@ -281,21 +281,30 @@ body.formula-mode td.cell { cursor: crosshair; }
 </style>
 </head>
 <body>
-
+ 
 <div id="loading-overlay">
   <div class="spinner"></div>
   <div id="loading-text">Chargement…</div>
 </div>
-
+ 
 <!-- Status bar -->
 <div id="status-bar">
   <span id="instance-label">instance: —</span>
+  <input id="sheet-name-input" type="text" placeholder="Nom du tableur…"
+    style="border:1px solid var(--border);border-radius:var(--radius);padding:1px 7px;font-size:11px;font-family:'DM Sans',sans-serif;color:var(--text);background:var(--toolbar-bg);height:20px;width:180px;outline:none;"
+    onchange="setSheetName(this.value.trim())"
+    onfocus="this.style.borderColor='var(--accent)'"
+    onblur="this.style.borderColor='var(--border)'"
+  />
+  <a id="drive-link" href="#" target="_blank"
+    style="display:none;font-size:10px;color:var(--accent);text-decoration:none;font-weight:500;"
+    title="Ouvrir dans Google Drive">📁 Ouvrir dans Drive</a>
   <div id="save-pill">
     <div id="save-dot"></div>
     <span id="save-text">—</span>
   </div>
 </div>
-
+ 
 <!-- Toolbar -->
 <div id="toolbar">
   <!-- Font -->
@@ -308,7 +317,7 @@ body.formula-mode td.cell { cursor: crosshair; }
     </select>
   </div>
   <div class="tb-sep"></div>
-
+ 
   <!-- Style -->
   <div class="tb-group">
     <button class="tb-btn" id="btn-bold"   onclick="applyFmt('bold')"   title="Gras"><b>G</b></button>
@@ -316,7 +325,7 @@ body.formula-mode td.cell { cursor: crosshair; }
     <button class="tb-btn" id="btn-under"  onclick="applyFmt('under')"  title="Souligné"><u>S</u></button>
   </div>
   <div class="tb-sep"></div>
-
+ 
   <!-- Align -->
   <div class="tb-group">
     <button class="tb-btn" onclick="applyFmt('align','left')"   title="Gauche">⟵</button>
@@ -324,7 +333,7 @@ body.formula-mode td.cell { cursor: crosshair; }
     <button class="tb-btn" onclick="applyFmt('align','right')"  title="Droite">⟶</button>
   </div>
   <div class="tb-sep"></div>
-
+ 
   <!-- Text color -->
   <div class="tb-group dropdown-wrap" id="wrap-tc">
     <button class="tb-btn" onclick="togglePalette('tc')" title="Couleur texte">
@@ -333,7 +342,7 @@ body.formula-mode td.cell { cursor: crosshair; }
     </button>
     <div class="color-palette" id="palette-tc"></div>
   </div>
-
+ 
   <!-- BG color -->
   <div class="tb-group dropdown-wrap" id="wrap-bg">
     <button class="tb-btn" onclick="togglePalette('bg')" title="Couleur fond">
@@ -343,7 +352,7 @@ body.formula-mode td.cell { cursor: crosshair; }
     <div class="color-palette" id="palette-bg"></div>
   </div>
   <div class="tb-sep"></div>
-
+ 
   <!-- Borders -->
   <div class="tb-group dropdown-wrap" id="wrap-border">
     <button class="tb-btn" onclick="toggleDropdown('border-dd')" title="Bordures">⬜ Bordures ▾</button>
@@ -358,35 +367,41 @@ body.formula-mode td.cell { cursor: crosshair; }
     </div>
   </div>
   <div class="tb-sep"></div>
-
+ 
   <!-- Merge -->
   <div class="tb-group">
     <button class="tb-btn" onclick="mergeCells()" title="Fusionner la sélection">⊞ Fusionner</button>
     <button class="tb-btn danger" onclick="unmergeCells()" title="Défusionner">⊟ Défusionner</button>
   </div>
   <div class="tb-sep"></div>
-
+ 
   <!-- Add rows/cols -->
   <div class="tb-group">
     <button class="tb-btn" onclick="addRows(10)" title="Ajouter 10 lignes">+ Lignes</button>
     <button class="tb-btn" onclick="addCols(5)"  title="Ajouter 5 colonnes">+ Colonnes</button>
   </div>
   <div class="tb-sep"></div>
-
+ 
   <!-- Save -->
   <button class="tb-btn active" onclick="saveNow()" title="Sauvegarder (Ctrl+S)">💾 Sauvegarder</button>
+  <div class="tb-sep"></div>
+  <!-- Backup -->
+  <button class="tb-btn" onclick="exportJSON()" title="Télécharger une sauvegarde JSON">⬇ Export</button>
+  <label class="tb-btn" title="Importer une sauvegarde JSON" style="cursor:pointer;">
+    ⬆ Import<input type="file" accept=".json" onchange="importJSON(event)" style="display:none;">
+  </label>
 </div>
-
+ 
 <!-- Formula bar -->
 <div id="formula-bar">
   <input id="cell-ref" readonly value="A1"/>
   <span id="fx-label">fx</span>
   <input id="formula-input" type="text" spellcheck="false" autocomplete="off" placeholder="Entrez une valeur ou =formule…"/>
 </div>
-
+ 
 <!-- Grid -->
 <div id="grid-wrap"><table id="grid"></table></div>
-
+ 
 <!-- Context menu -->
 <div id="ctx">
   <div class="ctx-item" onclick="ctxDo('copy')"><span class="ctx-icon">📋</span> Copier</div>
@@ -406,8 +421,7 @@ body.formula-mode td.cell { cursor: crosshair; }
   <div class="ctx-sep"></div>
   <div class="ctx-item danger" onclick="ctxDo('clear')"><span class="ctx-icon">🧹</span> Effacer</div>
 </div>
-
-<script src="https://cdn.jsdelivr.net/npm/monday-sdk-js/dist/main.js"></script>
+ 
 <script>
 // ═══════════════════════════════════════════════════════════════
 // INSTANCE ID — unique per embed, persists in localStorage
@@ -419,7 +433,7 @@ body.formula-mode td.cell { cursor: crosshair; }
 // ═══════════════════════════════════════════════════════════════
 const _urlParams = new URLSearchParams(window.location.search);
 let instanceId = _urlParams.get('id');
-
+ 
 if (!instanceId) {
   // Génère un ID unique court et lisible
   instanceId = 'tbl_' + Date.now().toString(36) + Math.random().toString(36).slice(2, 6);
@@ -428,18 +442,21 @@ if (!instanceId) {
   window.location.replace(newUrl);
   // Le reste du script ne s'exécute pas (redirection en cours)
 }
-
+ 
 const STORAGE_KEY = 'tableur_v3_' + instanceId;
-
+ 
 // Affiche l'ID en haut
 const instLabel = document.getElementById('instance-label');
 instLabel.textContent = '📋 ' + instanceId;
-
+ 
+// Init nom du tableur
+document.getElementById('sheet-name-input').value = localStorage.getItem(STORAGE_KEY + '_name') || instanceId;
+ 
 // ═══════════════════════════════════════════════════════════════
-// monday SDK
+// BACKEND — Google Apps Script
 // ═══════════════════════════════════════════════════════════════
-const mondayClient = window.monday || null;
-
+const API_URL = 'https://script.google.com/macros/s/AKfycbyRgNdAL8_Pq7Xqm0HkQ5JglRXkg3XOTQNPimDPasapDcyVEcf1W4yzeoO_9a-hqHS3kA/exec';
+ 
 // ═══════════════════════════════════════════════════════════════
 // STATUS
 // ═══════════════════════════════════════════════════════════════
@@ -448,9 +465,12 @@ function setStatus(state, text) {
   pill.className = state || '';
   document.getElementById('save-text').textContent = text;
 }
-
+ 
 // ═══════════════════════════════════════════════════════════════
-// SAVE / LOAD
+// SAVE / LOAD — Système multicouche
+//   1. Google Apps Script (si disponible)
+//   2. localStorage (fallback local toujours actif)
+//   3. Export/Import JSON manuel
 // ═══════════════════════════════════════════════════════════════
 let saveTimer = null;
 function scheduleSave() {
@@ -458,44 +478,162 @@ function scheduleSave() {
   setStatus('saving', 'Modifications…');
   saveTimer = setTimeout(saveNow, 1800);
 }
-
-async function saveNow() {
-  if (saveTimer) { clearTimeout(saveTimer); saveTimer = null; }
-  if (!mondayClient || !mondayClient.storage) {
-    setStatus('error', 'SDK monday non disponible');
-    return;
-  }
-  const payload = JSON.stringify({ data, fmt, merges, ROWS, COLS, colWidths });
-  setStatus('saving', 'Sauvegarde…');
+ 
+// ── Sauvegarde locale (toujours) ──
+function saveLocal(payload) {
   try {
-    await mondayClient.storage.setItem(STORAGE_KEY, payload);
-    setStatus('saved', 'Sauvegardé ✓ ' + now());
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(payload));
   } catch(e) {
-    setStatus('error', 'Erreur de sauvegarde monday');
-    console.error('monday storage error:', e);
+    console.warn('localStorage indisponible:', e);
   }
 }
-
-async function loadData() {
-  if (!mondayClient || !mondayClient.storage) {
-    setStatus('error', 'SDK monday non disponible');
-    return null;
-  }
+function loadLocal() {
   try {
-    const res = await mondayClient.storage.getItem(STORAGE_KEY);
-    const v = res?.data?.value;
-    if (v) return JSON.parse(v);
-  } catch(e) {
-    setStatus('error', 'Erreur de chargement monday');
-    console.error('monday storage error:', e);
-  }
+    const raw = localStorage.getItem(STORAGE_KEY);
+    if (raw) return JSON.parse(raw);
+  } catch(e) {}
   return null;
 }
-
+ 
+// ── Export JSON ──
+function exportJSON() {
+  const payload = { data, fmt, merges, ROWS, COLS, colWidths, exportedAt: new Date().toISOString(), instanceId };
+  const blob = new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' });
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = instanceId + '_' + new Date().toISOString().slice(0,10) + '.json';
+  a.click();
+  URL.revokeObjectURL(a.href);
+}
+ 
+// ── Import JSON ──
+function importJSON(event) {
+  const file = event.target.files[0]; if (!file) return;
+  const reader = new FileReader();
+  reader.onload = e => {
+    try {
+      const saved = JSON.parse(e.target.result);
+      if (saved.ROWS && saved.ROWS > ROWS) addRows(saved.ROWS - ROWS);
+      if (saved.COLS && saved.COLS > COLS) addCols(saved.COLS - COLS);
+      if (saved.data)      { Object.keys(data).forEach(k=>delete data[k]); Object.assign(data, saved.data); }
+      if (saved.fmt)       { Object.keys(fmt).forEach(k=>delete fmt[k]);   Object.assign(fmt,  saved.fmt);  }
+      if (saved.merges)    { Object.keys(merges).forEach(k=>delete merges[k]); Object.assign(merges, saved.merges); }
+      if (saved.colWidths) Object.assign(colWidths, saved.colWidths);
+      applyMergesFromState(); refreshAll();
+      saveLocal({ data, fmt, merges, ROWS, COLS, colWidths });
+      setStatus('saved', 'Importé ✓ ' + now());
+    } catch(err) {
+      setStatus('error', 'Fichier JSON invalide');
+      console.error('import error:', err);
+    }
+  };
+  reader.readAsText(file);
+  event.target.value = '';
+}
+ 
+// ── Nom du tableur (éditable) ──
+let sheetName = localStorage.getItem(STORAGE_KEY + '_name') || instanceId;
+function getSheetName() { return sheetName; }
+function setSheetName(n) {
+  sheetName = n || instanceId;
+  localStorage.setItem(STORAGE_KEY + '_name', sheetName);
+  document.getElementById('sheet-name-input').value = sheetName;
+}
+ 
+// ── Sauvegarde principale ──
+async function saveNow() {
+  if (saveTimer) { clearTimeout(saveTimer); saveTimer = null; }
+  setStatus('saving', 'Sauvegarde…');
+  const payload = { data, fmt, merges, ROWS, COLS, colWidths };
+ 
+  // 1. Toujours sauvegarder localement en premier
+  saveLocal(payload);
+ 
+  // 2. Essayer Google Apps Script → Google Drive
+  let driveFileId = localStorage.getItem(STORAGE_KEY + '_driveId') || null;
+  try {
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), 8000);
+    const res = await fetch(API_URL, {
+      method: 'POST',
+      body: JSON.stringify({
+        id: instanceId,
+        name: getSheetName(),
+        driveFileId,
+        payload
+      }),
+      signal: controller.signal,
+    });
+    clearTimeout(timeout);
+    if (res.ok) {
+      const json = await res.json().catch(() => ({}));
+      // Le script renvoie le fileId Drive pour les saves suivantes
+      if (json.driveFileId) {
+        localStorage.setItem(STORAGE_KEY + '_driveId', json.driveFileId);
+        driveFileId = json.driveFileId;
+      }
+      const driveUrl = json.driveUrl || null;
+      updateDriveLink(driveUrl);
+      setStatus('saved', '📁 Drive ✓ ' + now());
+      return;
+    }
+  } catch(e) {
+    console.warn('Drive save indisponible, localStorage utilisé:', e.message);
+  }
+ 
+  setStatus('saved', '💾 Local ✓ ' + now());
+}
+ 
+// ── Chargement principal ──
+async function loadData() {
+  setStatus('saving', 'Chargement…');
+ 
+  // 1. Essayer Google Apps Script → Drive
+  try {
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), 8000);
+    const driveFileId = localStorage.getItem(STORAGE_KEY + '_driveId') || '';
+    const res = await fetch(
+      API_URL + '?id=' + encodeURIComponent(instanceId) + '&driveFileId=' + encodeURIComponent(driveFileId),
+      { signal: controller.signal }
+    );
+    clearTimeout(timeout);
+    if (res.ok) {
+      const json = await res.json();
+      if (json && json.payload && Object.keys(json.payload).length) {
+        if (json.driveFileId) localStorage.setItem(STORAGE_KEY + '_driveId', json.driveFileId);
+        if (json.name) setSheetName(json.name);
+        if (json.driveUrl) updateDriveLink(json.driveUrl);
+        console.log('Données chargées depuis Google Drive');
+        return json.payload;
+      }
+    }
+  } catch(e) {
+    console.warn('Drive load indisponible, tentative localStorage:', e.message);
+  }
+ 
+  // 2. Fallback : localStorage
+  const local = loadLocal();
+  if (local) {
+    console.log('Données chargées depuis localStorage');
+    return local;
+  }
+ 
+  return null;
+}
+ 
+// ── Lien Drive dans la status bar ──
+function updateDriveLink(url) {
+  let link = document.getElementById('drive-link');
+  if (!link) return;
+  if (url) { link.href = url; link.style.display = 'inline'; }
+  else link.style.display = 'none';
+}
+ 
 function now() {
   return new Date().toLocaleTimeString('fr-FR',{hour:'2-digit',minute:'2-digit'});
 }
-
+ 
 // ═══════════════════════════════════════════════════════════════
 // STATE
 // ═══════════════════════════════════════════════════════════════
@@ -504,14 +642,14 @@ const data    = {};  // { 'A1': '=SUM(...)' }
 const fmt     = {};  // { 'A1': { bold, italic, under, size, align, tc, bg, border } }
 const merges  = {};  // { 'A1': { r2, c2 } }  top-left → extent
 const colWidths = {}; // { 0: 100 }
-
+ 
 let selR = 0, selC = 0;
 let selR2 = 0, selC2 = 0;  // selection range end
 let editing = false, editor = null;
 let clipboard = null;
 let formulaMode = false, pickStart = null, pickDragging = false;
 let pendingRefStart = -1, pendingRefEnd = -1;
-
+ 
 function colName(c) { return String.fromCharCode(65 + c); }
 function cellId(r, c) { return colName(c) + (r + 1); }
 function parseRef(ref) {
@@ -528,7 +666,7 @@ function parseRange(ref) {
   if (!a || !b) return null;
   return { r1: Math.min(a.r,b.r), c1: Math.min(a.c,b.c), r2: Math.max(a.r,b.r), c2: Math.max(a.c,b.c) };
 }
-
+ 
 // ═══════════════════════════════════════════════════════════════
 // EVALUATE (full formula engine — unchanged from original)
 // ═══════════════════════════════════════════════════════════════
@@ -657,7 +795,7 @@ function evaluate(id, visited = new Set()) {
     return result;
   } catch(e) { return '#ERR!'; }
 }
-
+ 
 function fmtNum(n) {
   if (!isFinite(n)) return '#DIV/0!';
   if (Number.isInteger(n)) return n.toLocaleString('fr-FR');
@@ -676,7 +814,7 @@ function displayValue(id) {
   if (typeof val === 'number') return { text: fmtNum(val), isNum: true, isErr: false };
   return { text: String(val), isNum: false, isErr: false };
 }
-
+ 
 // ═══════════════════════════════════════════════════════════════
 // COLOR PALETTES
 // ═══════════════════════════════════════════════════════════════
@@ -688,7 +826,7 @@ const PALETTE_COLORS = [
   '#cc0000','#e69138','#f1c232','#6aa84f','#45818e','#3d85c6','#674ea7','#a64d79',
   '#990000','#b45309','#bf9000','#38761d','#134f5c','#1155cc','#351c75','#741b47',
 ];
-
+ 
 function buildPalettes() {
   ['tc','bg'].forEach(type => {
     const pal = document.getElementById('palette-' + type);
@@ -712,7 +850,7 @@ function buildPalettes() {
     pal.appendChild(grid);
   });
 }
-
+ 
 function togglePalette(type) {
   const pal = document.getElementById('palette-' + type);
   const wasOpen = pal.classList.contains('open');
@@ -729,7 +867,7 @@ function closeAllDropdowns() {
   document.querySelectorAll('.dropdown-menu.open, .color-palette.open').forEach(el => el.classList.remove('open'));
 }
 document.addEventListener('click', closeAllDropdowns);
-
+ 
 // ═══════════════════════════════════════════════════════════════
 // GRID BUILD
 // ═══════════════════════════════════════════════════════════════
@@ -751,7 +889,7 @@ function buildGrid() {
   attachCellEvents();
   applyMergesFromState();
 }
-
+ 
 function addRows(n = 10) {
   const tbody = document.querySelector('#grid tbody');
   const start = ROWS; ROWS += n;
@@ -764,7 +902,7 @@ function addRows(n = 10) {
   }
   attachCellEvents(); scheduleSave();
 }
-
+ 
 function addCols(n = 5) {
   COLS += n;
   // Add header cells
@@ -788,7 +926,7 @@ function addCols(n = 5) {
   }
   attachCellEvents(); scheduleSave();
 }
-
+ 
 // ═══════════════════════════════════════════════════════════════
 // COLUMN RESIZE
 // ═══════════════════════════════════════════════════════════════
@@ -818,7 +956,7 @@ function endColResize() {
   document.removeEventListener('mouseup', endColResize);
   scheduleSave();
 }
-
+ 
 // ═══════════════════════════════════════════════════════════════
 // MERGE CELLS
 // ═══════════════════════════════════════════════════════════════
@@ -840,7 +978,7 @@ function applyMergesFromState() {
     }
   });
 }
-
+ 
 function mergeCells() {
   const r1 = Math.min(selR, selR2), c1 = Math.min(selC, selC2);
   const r2 = Math.max(selR, selR2), c2 = Math.max(selC, selC2);
@@ -861,7 +999,7 @@ function mergeCells() {
   merges[id] = { r2, c2 };
   refreshAll(); scheduleSave();
 }
-
+ 
 function unmergeCells() {
   const id = cellId(selR, selC);
   const m = merges[id];
@@ -879,7 +1017,7 @@ function unmergeCells() {
   delete merges[id];
   refreshAll(); scheduleSave();
 }
-
+ 
 // ═══════════════════════════════════════════════════════════════
 // BORDERS
 // ═══════════════════════════════════════════════════════════════
@@ -910,7 +1048,7 @@ function applyBorder(type) {
   }
   scheduleSave();
 }
-
+ 
 // ═══════════════════════════════════════════════════════════════
 // CELL EVENTS
 // ═══════════════════════════════════════════════════════════════
@@ -939,13 +1077,13 @@ function attachCellEvents() {
     td.addEventListener('contextmenu', e => { e.preventDefault(); if (!formulaMode) { selectCell(r, c); showCtx(e.clientX, e.clientY); } });
   }
 }
-
+ 
 // ═══════════════════════════════════════════════════════════════
 // FORMULA PICKING
 // ═══════════════════════════════════════════════════════════════
 function enterFormulaMode() { formulaMode = true; document.body.classList.add('formula-mode'); }
 function exitFormulaMode() { formulaMode = false; pickDragging = false; pickStart = null; document.body.classList.remove('formula-mode'); clearRefHighlights(); }
-
+ 
 function insertRefInFormula(r1, c1, r2, c2) {
   const refStr = (r1===r2&&c1===c2) ? cellId(r1,c1) : (cellId(Math.min(r1,r2),Math.min(c1,c2))+':'+cellId(Math.max(r1,r2),Math.max(c1,c2)));
   const ed = editor || document.getElementById('formula-input');
@@ -974,7 +1112,7 @@ function highlightRefs(formula) {
     else { const rng=parseRange(ref.a+':'+ref.b); if(rng){for(let r=rng.r1;r<=rng.r2;r++) for(let c=rng.c1;c<=rng.c2;c++){const td=document.getElementById(`c-${r}-${c}`);if(td)td.classList.add(`ref-${ref.idx}`);}}}
   });
 }
-
+ 
 // ═══════════════════════════════════════════════════════════════
 // SELECTION
 // ═══════════════════════════════════════════════════════════════
@@ -987,7 +1125,7 @@ function selectCell(r, c) {
   updateToolbarState(id);
   highlightRefs(data[id] || '');
 }
-
+ 
 function renderSelection() {
   document.querySelectorAll('.cell.selected,.cell.in-selection').forEach(el => el.classList.remove('selected','in-selection'));
   document.querySelectorAll('.col-header.sel,.row-header.sel,.col-header.hl,.row-header.hl').forEach(el => el.classList.remove('sel','hl'));
@@ -1000,7 +1138,7 @@ function renderSelection() {
   for (let c=c1;c<=c2;c++) { const h=document.getElementById('ch-'+c); if(h) h.classList.add(c===selC&&r1===r2?'sel':'hl'); }
   for (let r=r1;r<=r2;r++) { const h=document.getElementById('rh-'+r); if(h) h.classList.add(r===selR&&c1===c2?'sel':'hl'); }
 }
-
+ 
 function updateToolbarState(id) {
   const f = fmt[id] || {};
   document.getElementById('btn-bold').classList.toggle('active', !!f.bold);
@@ -1008,7 +1146,7 @@ function updateToolbarState(id) {
   document.getElementById('btn-under').classList.toggle('active', !!f.under);
   document.getElementById('sel-font-size').value = f.size || '12';
 }
-
+ 
 // ═══════════════════════════════════════════════════════════════
 // EDIT
 // ═══════════════════════════════════════════════════════════════
@@ -1040,7 +1178,7 @@ function startEdit(r, c, initVal) {
     if (e.key.length===1||e.key==='Backspace'||e.key==='Delete') { pendingRefStart=-1; pendingRefEnd=-1; }
   };
 }
-
+ 
 function commitEdit() {
   if (!editing || !editor) return;
   exitFormulaMode();
@@ -1050,7 +1188,7 @@ function commitEdit() {
   editor.remove(); editor = null; editing = false;
   clearRefHighlights(); refreshAll(); scheduleSave();
 }
-
+ 
 // ═══════════════════════════════════════════════════════════════
 // FORMAT
 // ═══════════════════════════════════════════════════════════════
@@ -1072,7 +1210,7 @@ function applyFmt(type, val) {
   updateToolbarState(cellId(selR, selC));
   scheduleSave();
 }
-
+ 
 // ═══════════════════════════════════════════════════════════════
 // REFRESH
 // ═══════════════════════════════════════════════════════════════
@@ -1105,7 +1243,7 @@ function refreshAll() {
   for (let r=0;r<ROWS;r++) for (let c=0;c<COLS;c++) refreshCell(cellId(r,c));
   document.getElementById('formula-input').value = data[cellId(selR,selC)] || '';
 }
-
+ 
 // ═══════════════════════════════════════════════════════════════
 // FORMULA BAR
 // ═══════════════════════════════════════════════════════════════
@@ -1128,7 +1266,7 @@ fi.addEventListener('keydown', e => {
   if (e.key==='Escape') { fi.value=data[cellId(selR,selC)]||''; exitFormulaMode(); clearRefHighlights(); fi.blur(); }
   pendingRefStart=-1; pendingRefEnd=-1;
 });
-
+ 
 // ═══════════════════════════════════════════════════════════════
 // KEYBOARD GLOBAL
 // ═══════════════════════════════════════════════════════════════
@@ -1153,9 +1291,9 @@ document.addEventListener('keydown', e => {
   if ((e.ctrlKey||e.metaKey) && e.key==='z') { /* TODO: undo */ return; }
   if (e.key.length===1&&!e.ctrlKey&&!e.metaKey) { startEdit(selR,selC,e.key); }
 });
-
+ 
 document.addEventListener('mouseup', () => { if (formulaMode&&pickDragging){pickDragging=false;focusEditor();} });
-
+ 
 // ═══════════════════════════════════════════════════════════════
 // CONTEXT MENU
 // ═══════════════════════════════════════════════════════════════
@@ -1164,7 +1302,7 @@ function showCtx(x, y) {
   m.style.display = 'block'; m.style.left = x+'px'; m.style.top = y+'px';
 }
 document.addEventListener('click', () => { document.getElementById('ctx').style.display='none'; });
-
+ 
 function ctxDo(a) {
   const id = cellId(selR, selC);
   if (a==='copy')  { clipboard={val:data[id]||'',fmt:JSON.parse(JSON.stringify(fmt[id]||{}))}; }
@@ -1173,7 +1311,7 @@ function ctxDo(a) {
   if (a==='clear') { delete data[id];delete fmt[id];refreshAll();scheduleSave(); }
   if (a==='merge') { mergeCells(); }
   if (a==='unmerge') { unmergeCells(); }
-
+ 
   // Insert/delete rows
   if (a==='insRowAbove') {
     for (let r=ROWS-1;r>selR;r--) for (let c=0;c<COLS;c++) { const f=cellId(r-1,c),t=cellId(r,c); data[t]=data[f]||''; fmt[t]=JSON.parse(JSON.stringify(fmt[f]||{})); }
@@ -1210,14 +1348,14 @@ function ctxDo(a) {
   }
   document.getElementById('ctx').style.display = 'none';
 }
-
+ 
 // ═══════════════════════════════════════════════════════════════
 // INIT
 // ═══════════════════════════════════════════════════════════════
 async function init() {
   buildPalettes();
   buildGrid();
-
+ 
   const saved = await loadData();
   if (saved) {
     if (saved.ROWS && saved.ROWS > ROWS) addRows(saved.ROWS - ROWS);
@@ -1232,11 +1370,11 @@ async function init() {
   } else {
     setStatus('', 'Prêt');
   }
-
+ 
   document.getElementById('loading-overlay').classList.add('hidden');
   selectCell(0, 0);
 }
-
+ 
 init();
 </script>
 </body>
